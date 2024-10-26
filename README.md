@@ -34,6 +34,9 @@
    Create a `.env` file in the `porkbun_ddns` directory with the following content:
 
    ```plaintext
+   # Domains
+   DOMAINS = "yourdomain1.com,yourdomain2.com"
+
    # API details
    API_KEY = "your_porkbun_api_key"
    SECRET_KEY = "your_porkbun_secret_key"
@@ -46,19 +49,11 @@
    RECIPIENT_EMAIL = "recipient_email@example.com"
    ```
 
-   Replace the placeholder values with your actual API keys and email configuration.
+   Replace the placeholder values with your actual API keys, email configuration, and domains.
 
 ### Usage
 
-1. **Configure Domains:**
-
-   Edit the `main.py` file to specify the domains you want to update. Modify the `domains` list:
-
-   ```python
-   domains = ["yourdomain1.com", "yourdomain2.com"]
-   ```
-
-2. **Run the Script:**
+1. **Run the Script:**
 
    Execute the script to update the DNS records:
 
@@ -76,7 +71,7 @@ If there are any errors during the DNS update process, an email will be sent to 
 
 - `porkbun_ddns_updater.py`: Contains the `PorkbunDDNSUpdater` class responsible for interacting with the Porkbun API and sending emails.
 - `main.py`: The main script that initializes the updater and processes the domains.
-- `.env`: Stores environment variables for API and email configuration.
+- `.env`: Stores environment variables for API, email configuration, and domain declarations.
 
 ## License
 
